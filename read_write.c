@@ -111,17 +111,17 @@ void writer(void)
 
 int main()
 {
-	  TCB_t *Q = newQueue();
-	  ReadyQ = Q;
-		mutex = CreateSem(1);
-		r_sem = CreateSem(0);
-		w_sem = CreateSem(0);
-    start_thread(reader);
-    start_thread(reader);
-    start_thread(reader);
-    start_thread(reader);
-		start_thread(reader);
-		start_thread(writer);
-    start_thread(writer);
-		run();
+	TCB_t *Q = newQueue();
+	ReadyQ = Q;
+	mutex = CreateSem(1);
+	r_sem = CreateSem(0);
+	w_sem = CreateSem(0);
+    	start_thread(reader);
+    	start_thread(reader);
+    	start_thread(reader);
+   	start_thread(reader);
+	start_thread(reader);
+	start_thread(writer);
+    	start_thread(writer);
+	run();
 }
